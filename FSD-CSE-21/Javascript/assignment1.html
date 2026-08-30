@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+</head>
+
+<body>
+
+    <div style="height: 300px; text-align: center; width: 300px; background-color: chartreuse; border: 2px solid black;">
+        <h1>Online Shop</h1>
+
+        <p>Tea : 100</p>
+        <p>Coffee : 200</p>
+        <p>Aatta : 300</p>
+        <p>Chini : 400</p>
+
+        <button onclick="ad()">Buy Now</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+
+        const shop = {
+            Tea: 100,
+            Coffee: 200,
+            Aatta: 300,
+            Chini: 400
+        };
+
+        function ad() {
+
+            let a = prompt("Enter your product name:");
+            let b = prompt("Enter your quantity:");
+
+            if (shop[a] !== undefined) {
+
+                let price = shop[a];
+                let total = price * b;
+
+                document.getElementById("result").innerHTML =
+                    "Total amount is: " + total;
+
+            } else {
+
+                document.getElementById("result").innerHTML =
+                    "Product not found";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
