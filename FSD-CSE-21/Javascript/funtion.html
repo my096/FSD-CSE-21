@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+<script>
+    const add = (x, y) => x + y;
+
+    const sub = (x, y) => x - y;
+
+    const mul = (x, y) => x * y;
+
+    const div = (x, y) => {
+        if (y !== 0) {
+            return x / y;
+        } else {
+            return "error";
+        }
+    };
+
+    document.write(add(10, 2) + "<br>");
+    document.write(sub(10, 2) + "<br>");
+    document.write(mul(10, 2) + "<br>");
+    document.write(div(10, 2));
+</script>
+
+</body>
+</html>
+
+   
